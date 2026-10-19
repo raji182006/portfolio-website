@@ -1,0 +1,1342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rajeshwari R | Portfolio</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <style>
+
+        /* ================= GENERAL ================= */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            color: #26313d;
+            background: #ffffff;
+        }
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-weight: bold;
+            color: #344257;
+            margin-bottom: 50px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #c69b5b;
+            margin: 12px auto;
+            border-radius: 5px;
+        }
+
+        /* ================= NAVBAR ================= */
+
+        .navbar {
+            background: #253246;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+
+        .nav-link {
+            color: white !important;
+            margin-left: 10px;
+        }
+
+        .nav-link:hover {
+            color: #e8c98e !important;
+        }
+
+        /* ================= HOME ================= */
+
+        #home {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, #253246, #56657a);
+            color: white;
+            padding-top: 100px;
+        }
+
+        .profile-img {
+            width: 280px;
+            height: 280px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 7px solid white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+
+        .home-title {
+            font-size: 55px;
+            font-weight: bold;
+        }
+
+        .home-subtitle {
+            color: #e8c98e;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .btn-gold {
+            background: #c69b5b;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+        }
+
+        .btn-gold:hover {
+            background: #a98048;
+            color: white;
+        }
+
+        /* ================= ABOUT ================= */
+
+        #about {
+            background: white;
+        }
+
+        .about-card {
+            background: #f7f4ef;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        /* ================= EDUCATION ================= */
+
+        #education {
+            background: #f7f4ef;
+        }
+
+        .info-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        /* ================= SKILLS ================= */
+
+        .skill-card {
+            text-align: center;
+            background: white;
+            padding: 30px 10px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .skill-icon {
+            font-size: 40px;
+            color: #c69b5b;
+            margin-bottom: 10px;
+        }
+
+        /* ================= PROJECTS ================= */
+
+        #projects {
+            background: #f7f4ef;
+        }
+
+        .project-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            height: 100%;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+        }
+
+        .tag {
+            display: inline-block;
+            background: #e9edf2;
+            padding: 6px 12px;
+            margin: 4px;
+            border-radius: 20px;
+            font-size: 13px;
+        }
+
+        /* ================= GAME ================= */
+
+        #game {
+            background: white;
+        }
+
+        .game-container {
+            background: #253246;
+            padding: 30px;
+            border-radius: 20px;
+            color: white;
+        }
+
+        #gameArea {
+            position: relative;
+            height: 350px;
+            background: #edf2f7;
+            border-radius: 15px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        #star {
+            position: absolute;
+            display: none;
+            width: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 50%;
+            background: #c69b5b;
+            color: white;
+            font-size: 25px;
+            cursor: pointer;
+        }
+
+        #gameMessage {
+            color: #555;
+        }
+
+        /* ================= CONTACT ================= */
+
+        #contact {
+            background: #f7f4ef;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .contact-icon {
+            background: #344257;
+            color: white;
+            width: 45px;
+            height: 45px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+
+        .form-control {
+            padding: 12px;
+            border-radius: 10px;
+        }
+
+        /* ================= FOOTER ================= */
+
+        footer {
+            background: #253246;
+            color: white;
+            text-align: center;
+            padding: 25px;
+        }
+        /* ================= SOCIAL ICONS ================= */
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    text-decoration: none;
+
+    font-size: 25px;
+
+    color: white;
+
+    background: #344257;
+
+    transition: 0.3s;
+}
+
+.social-icon:hover {
+    transform: translateY(-6px);
+    color: white;
+}
+
+.linkedin:hover {
+    background: #0A66C2;
+}
+
+.github:hover {
+    background: #171515;
+}
+
+.leetcode:hover {
+    background: #FFA116;
+}
+
+.email:hover {
+    background: #D44638;
+}
+
+        /* ================= MOBILE ================= */
+
+        @media (max-width: 768px) {
+
+            .home-title {
+                font-size: 38px;
+            }
+
+            .home-subtitle {
+                font-size: 22px;
+            }
+
+            .profile-img {
+                width: 210px;
+                height: 210px;
+                margin-bottom: 30px;
+            }
+
+            #home {
+                text-align: center;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+
+    <div class="container">
+
+        <a class="navbar-brand" href="#home">
+            RAJESHWARI R
+        </a>
+
+        <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarMenu">
+
+            <span class="navbar-toggler-icon"></span>
+
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarMenu">
+
+            <ul class="navbar-nav ms-auto">
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#home">Home</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">About</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#education">Education</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#skills">Skills</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#projects">Projects</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#game">Game</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<!-- ================= HOME ================= -->
+
+<section id="home">
+
+    <div class="container">
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-5 text-center">
+
+                <!-- Your profile photo -->
+                <!-- Replace profile.jpg with your image file if needed -->
+
+                <img src="raji.jpeg"
+                     alt="Rajeshwari R"
+                     class="profile-img">
+
+            </div>
+
+
+            <div class="col-lg-7">
+                <h1 class="home-title">
+                    Rajeshwari R
+                </h1>
+
+                <h3 class="home-subtitle">
+                    Aspiring Web Developer
+                </h3>
+
+                <p class="lead mt-3">
+
+                    I am a B.Tech - Information Technology student
+                    interested in Web Development. I enjoy creating
+                    responsive and user-friendly websites.
+
+                </p>
+
+                <a href="#projects"
+                   class="btn btn-gold me-2">
+
+                    View Projects
+
+                </a>
+
+                <a href="#contact"
+                   class="btn btn-outline-light">
+
+                    Contact Me
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            About Me
+        </h2>
+
+        <div class="row align-items-center">
+
+            <div class="col-lg-7">
+
+                <p>
+
+                    I am a motivated and enthusiastic B.Tech
+                    Information Technology student interested in
+                    Web Development.
+
+                </p>
+
+                <p>
+
+                    I have basic knowledge of HTML, CSS,
+                    JavaScript, Bootstrap, PHP and MySQL.
+                    I enjoy learning new technologies and
+                    developing creative websites.
+
+                </p>
+
+                <p>
+
+                    My goal is to improve my technical skills
+                    and grow as a professional Web Developer.
+
+                </p>
+
+            </div>
+
+
+            <div class="col-lg-5">
+
+                <div class="about-card">
+
+                    <h4>
+                        Quick Information
+                    </h4>
+
+                    <hr>
+
+                    <p>
+                        <b>Degree:</b>
+                        B.Tech Information Technology
+                    </p>
+
+                    <p>
+                        <b>College:</b>
+                        Mahendra Engineering College
+                    </p>
+
+                    <p>
+                        <b>University:</b>
+                        Anna University
+                    </p>
+
+                    <p>
+                        <b>Year:</b>
+                        2024 - 2028
+                    </p>
+
+                    <p>
+                        <b>CGPA:</b>
+                        8.45 / 10
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EDUCATION ================= -->
+
+<section id="education">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Education & Certification
+        </h2>
+
+
+        <div class="row g-4">
+
+            <div class="col-lg-6">
+
+                <div class="info-card">
+
+                    <h3>
+                        <i class="bi bi-mortarboard"></i>
+                        Education
+                    </h3>
+
+                    <hr>
+
+                    <h5>
+                        B.Tech – Information Technology
+                    </h5>
+
+                    <p>
+                        Mahendra Engineering College
+                        (Autonomous)
+                    </p>
+
+                    <p>
+                        Affiliated to Anna University
+                    </p>
+
+                    <p>
+                        2024 – 2028
+                    </p>
+
+                    <strong>
+                        CGPA: 8.45 / 10
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="col-lg-6">
+
+                <div class="info-card">
+
+                    <h3>
+                        <i class="bi bi-award"></i>
+                        Certifications
+                    </h3>
+
+                    <hr>
+
+                    <h5>
+                        NPTEL – Internet of Things
+                    </h5>
+
+                    <p>
+                        Score: 63%
+                    </p>
+
+                    <h5>
+                        Infosys Springboard
+                    </h5>
+
+                    <p>
+                        Python Programming
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SKILLS ================= -->
+
+<section id="skills">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Skills
+        </h2>
+
+
+        <div class="row g-4">
+
+            <!-- HTML -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-filetype-html skill-icon"></i>
+
+                    <h5>
+                        HTML
+                    </h5>
+
+                    <p>
+                        Web Structure
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- CSS -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-filetype-css skill-icon"></i>
+
+                    <h5>
+                        CSS
+                    </h5>
+
+                    <p>
+                        Web Design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- JavaScript -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-filetype-js skill-icon"></i>
+
+                    <h5>
+                        JavaScript
+                    </h5>
+
+                    <p>
+                        Web Interaction
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Bootstrap -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-bootstrap skill-icon"></i>
+
+                    <h5>
+                        Bootstrap
+                    </h5>
+
+                    <p>
+                        Responsive Design
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- PHP -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-code-slash skill-icon"></i>
+
+                    <h5>
+                        PHP
+                    </h5>
+
+                    <p>
+                        Backend Basics
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- MySQL -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-database skill-icon"></i>
+
+                    <h5>
+                        MySQL
+                    </h5>
+
+                    <p>
+                        Database
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- Problem Solving -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-lightbulb skill-icon"></i>
+
+                    <h5>
+                        Problem Solving
+                    </h5>
+
+                </div>
+
+            </div>
+
+
+            <!-- Team Work -->
+
+            <div class="col-6 col-md-4 col-lg-3">
+
+                <div class="skill-card">
+
+                    <i class="bi bi-people skill-icon"></i>
+
+                    <h5>
+                        Team Work
+                    </h5>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section id="projects">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Projects & Internship
+        </h2>
+
+
+        <div class="row g-4">
+
+            <!-- PROJECT 1 -->
+
+            <div class="col-lg-6">
+
+                <div class="project-card">
+
+                    <h3>
+                        <i class="bi bi-cart"></i>
+                        Fashion E-Commerce Website
+                    </h3>
+
+                    <hr>
+
+                    <p>
+
+                        A creative fashion e-commerce website
+                        developed with product pages, login,
+                        registration, contact and shopping
+                        sections.
+
+                    </p>
+
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- INTERNSHIP -->
+
+            <div class="col-lg-6">
+
+                <div class="project-card">
+
+                    <h3>
+                        <i class="bi bi-laptop"></i>
+                        Web Development Internship
+                    </h3>
+
+                    <hr>
+
+                    <p>
+
+                        Completed a 15-day Web Development
+                        internship at CodeBind Technologies,
+                        Chennai.
+
+                    </p>
+
+                    <p>
+                        Technologies used:
+                    </p>
+
+                    <span class="tag">HTML</span>
+                    <span class="tag">CSS</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">PHP</span>
+                    <span class="tag">MySQL</span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= GAME ================= -->
+
+<section id="game">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            My Mini Game 🎮
+        </h2>
+
+
+        <div class="game-container">
+
+            <div class="row">
+
+                <div class="col-md-8">
+
+                    <h3>
+                        ⭐ Catch the Star
+                    </h3>
+
+                    <p>
+                        Click the star as many times as
+                        possible before the timer ends!
+                    </p>
+
+                </div>
+
+
+                <div class="col-md-4 text-md-end">
+
+                    <span class="badge bg-light text-dark fs-6">
+                        Score:
+                        <span id="score">0</span>
+                    </span>
+
+                    <span class="badge bg-light text-dark fs-6">
+                        Time:
+                        <span id="time">20</span>s
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <button id="startGame"
+                    class="btn btn-gold mt-3">
+
+                Start Game
+
+            </button>
+
+
+            <div id="gameArea">
+
+                <button id="star">
+                    ★
+                </button>
+
+                <div id="gameMessage"
+                     class="position-absolute top-50 start-50 translate-middle text-center">
+
+                    Click "Start Game" to play
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <h2 class="section-title">
+            Contact Me
+        </h2>
+        <!-- SOCIAL MEDIA LINKS -->
+
+<div class="social-links mt-4">
+
+    <!-- LinkedIn -->
+    <a href="https://www.linkedin.com/in/rajeshwari-r-745369356?utm_source=share_via&utm_content=profile&utm_medium=member_android"
+       target="_blank"
+       class="social-icon linkedin"
+       title="LinkedIn">
+
+        <i class="bi bi-linkedin"></i>
+
+    </a>
+
+
+    <!-- GitHub -->
+    <a href="https://github.com/raji182006"
+       target="_blank"
+       class="social-icon github"
+       title="GitHub">
+
+        <i class="bi bi-github"></i>
+
+    </a>
+
+
+    <!-- LeetCode -->
+    <a href="https://leetcode.com/u/Raji1806"
+       target="_blank"
+       class="social-icon leetcode"
+       title="LeetCode">
+
+        <i class="bi bi-code-square"></i>
+
+    </a>
+
+
+    <!-- Email -->
+    <a href="mailto:raj181906@gmail.com"
+       class="social-icon email"
+       title="Email">
+
+        <i class="bi bi-envelope-fill"></i>
+
+    </a>
+
+</div>
+
+
+
+        <div class="row g-4">
+
+
+            <!-- CONTACT DETAILS -->
+
+            <div class="col-lg-5">
+
+                <div class="contact-card">
+
+                    <h3>
+                        Let's Connect
+                    </h3>
+
+                    <hr>
+
+                    <p>
+
+                        <span class="contact-icon">
+                            <i class="bi bi-telephone"></i>
+                        </span>
+
+                        8015341819
+
+                    </p>
+
+
+                    <p>
+
+                        <span class="contact-icon">
+                            <i class="bi bi-envelope"></i>
+                        </span>
+
+                        raj181906@gmail.com
+
+                    </p>
+
+
+                    <p>
+
+                        <span class="contact-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </span>
+
+                        Kallakurichi, Tamil Nadu
+
+                    </p>
+
+
+                    <a href="mailto:raji181906@gmail.com"
+                       class="btn btn-gold">
+
+                        <i class="bi bi-envelope"></i>
+                        Email Me
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="col-lg-7">
+
+                <div class="contact-card">
+
+                    <h3>
+                        Send Me a Message
+                    </h3>
+
+                    <hr>
+
+
+                    <form onsubmit="sendMessage(event)">
+
+                        <div class="mb-3">
+
+                            <input type="text"
+                                   class="form-control"
+                                   placeholder="Your Name"
+                                   required>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <input type="email"
+                                   class="form-control"
+                                   placeholder="Your Email"
+                                   required>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <input type="text"
+                                   class="form-control" placeholder="Subject"
+                                   required>
+
+                        </div>
+
+
+                        <div class="mb-3">
+
+                            <textarea class="form-control"
+                                      rows="5"
+                                      placeholder="Your Message"
+                                      required></textarea>
+
+                        </div>
+
+
+                        <button type="submit"
+                                class="btn btn-gold">
+
+                            Send Message
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <p class="mb-1">
+        © 2026 Rajeshwari R
+    </p>
+
+    <small>
+        Aspiring Web Developer
+    </small>
+
+</footer>
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<script>
+
+    /* ================= GAME ================= */
+
+    const startGame = document.getElementById("startGame");
+
+    const star = document.getElementById("star");
+
+    const gameArea = document.getElementById("gameArea");
+
+    const scoreText = document.getElementById("score");
+
+    const timeText = document.getElementById("time");
+
+    const gameMessage = document.getElementById("gameMessage");
+
+
+    let score = 0;
+
+    let time = 20;
+
+    let timer;
+
+    let playing = false;
+
+
+    function moveStar() {
+
+        const maxX =
+            gameArea.clientWidth - star.offsetWidth;
+
+        const maxY =
+            gameArea.clientHeight - star.offsetHeight;
+
+
+        const x =
+            Math.floor(Math.random() * maxX);
+
+        const y =
+            Math.floor(Math.random() * maxY);
+
+
+        star.style.left = x + "px";
+
+        star.style.top = y + "px";
+
+    }
+
+
+    startGame.addEventListener("click", function () {
+
+        score = 0;
+
+        time = 20;
+
+        playing = true;
+
+
+        scoreText.innerText = score;
+
+        timeText.innerText = time;
+
+
+        star.style.display = "block";
+
+        gameMessage.style.display = "none";
+
+
+        startGame.innerText = "Restart Game";
+
+
+        moveStar();
+
+
+        clearInterval(timer);
+
+
+        timer = setInterval(function () {
+
+            time--;
+
+            timeText.innerText = time;
+
+
+            if (time <= 0) {
+
+                clearInterval(timer);
+
+                playing = false;
+
+                star.style.display = "none";
+
+                gameMessage.style.display = "block";
+
+                gameMessage.innerHTML =
+                    "<strong>Game Over!</strong><br>" +
+                    "Your Score: " + score;
+
+            }
+
+        }, 1000);
+
+    });
+
+
+    star.addEventListener("click", function () {
+
+        if (!playing) {
+            return;
+        }
+
+
+        score++;
+
+        scoreText.innerText = score;
+
+
+        moveStar();
+
+    });
+
+
+    /* ================= CONTACT FORM ================= */
+
+    function sendMessage(event) {
+
+        event.preventDefault();
+
+
+        alert(
+            "Thank you! Your message has been submitted."
+        );
+
+
+        event.target.reset();
+
+    }
+
+</script>
+
+
+<!-- Bootstrap JavaScript -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+</html>
